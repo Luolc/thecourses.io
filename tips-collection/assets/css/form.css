@@ -1,0 +1,41 @@
+.headline {
+  margin-top: 96px;
+}
+
+.description {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.description a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.description a:hover, a:focus {
+  opacity: 0.6;
+}
+
+.form-custom {
+  width: 100%;
+}
+
+#tips-addon {
+  vertical-align: top;
+  padding-top: 9px;
+}
+#textarea-tips {
+  height: 320px;
+}
+#textarea-tips::-webkit-input-placeholder::after {
+  content: "\A老师的讲课风格、考勤频率、作业量、考核形式……\A或者单纯的吐槽~\A\A为了保证攻略收集的质量，该表单项要求字数大于137.";
+}
+
+.submit-button {
+  margin-top: 16px;
+}
+
+/* footer */
+.footer-wrapper {
+  margin-top: 24px;
+  padding-bottom: 12px;
+  font-size: 12px;
+}

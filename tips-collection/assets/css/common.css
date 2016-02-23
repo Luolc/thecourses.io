@@ -80,6 +80,7 @@ body {
 .form-control::-webkit-input-placeholder {
     color: #FFFFFF;
     opacity: 0.6;
+    font-weight: 100;
 }
 input {
   background-color: transparent;
@@ -98,6 +99,31 @@ input[type="password"] {
   border-left: none;
   border-right: none;
 }
+textarea[type="text"] {
+  border-radius: 0;
+  border-top: 1px solid #714365;
+  border-bottom: 1px solid #714365;
+  border-left: none;
+  border-right: none;
+  overflow: auto;
+  resize: none;
+}
+.input-group-addon {
+  width: 13%;
+  padding-right: 4px;
+  text-align: right;
+  border-radius: 0;
+  border-top: 1px solid #714365;
+  border-bottom: 1px solid #714365;
+  border-left: none;
+  border-right: none;
+  color: #FFFFFF;
+  background-color: transparent;
+}
+.input-group-addon p {
+  margin: 0;
+  opacity: 0.6;
+}
 .tessellation-top {
   margin-top: -1px;
 }
@@ -106,4 +132,17 @@ input[type="password"] {
 }
 .transparent-top {
   border-top: 1px solid transparent !important;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(255, 255, 255, 0.1);
 }
