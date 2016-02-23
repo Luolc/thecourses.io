@@ -27,11 +27,34 @@
 
   <body>
     
-    <div class="container">
-      <h1 class="text-center ultralight">IAAA验证</h1>
-      <p class="text-center translucent-color">为了保证内容收集的有效性，在填写攻略之前需要进行身份验证。<br>
+    <div class="container wrapper">
+      <h1 class="text-center ultralight headline">IAAA验证</h1>
+      <p class="text-center translucent-color description">为了保证内容收集的有效性，在填写攻略之前需要进行身份验证。<br>
           验证经由北大IAAA接口，在下方输入学号和IAAA密码即可。<br>
           学号仅用于认证，最终整理出的攻略报告中不包含任何具体身份信息。</p>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <form>
+                <label for="contact-account" class="sr-only">Student ID</label>
+                <input type="text" id="input-student-id" name="student-id" class="form-control tessellation-bottom" placeholder="Student ID" autocomplete="off"></input>
+                <input type="password" style="display:none"></input>
+                <label for="password" class="sr-only">Password</label>
+                <input type="text" id="input-password" name="password" class="form-control" placeholder="Password"></input>
+                <button class="btn btn-block ultralight validate-button">验证</button>
+              </form>
+              <p class="translucent-color note">仍然担心安全问题？<br>
+                  可以联系开发者luolc AT pku.edu.cn，并review相关代码^_^<br>
+                  欢迎接受大家的监督。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container divider-top footer-wrapper">
+      <footer class="text-center translucent-color">Copyright © 2016 Team Serol</footer>
     </div>
 
     <!-- Bootstrap core JavaScript

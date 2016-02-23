@@ -1,0 +1,24 @@
+.headline {
+  margin-top: 96px;
+}
+
+.description {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.validate-button {
+  margin-top: 16px;
+}
+.note {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+/* footer */
+.footer-wrapper {
+  margin-top: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 12px;
+}

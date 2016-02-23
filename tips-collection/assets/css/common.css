@@ -73,6 +73,10 @@ body {
   background-color: transparent;
   border-radius: 0;
 }
+.form-control:focus {
+  border-bottom-color: #714365;
+  border-top-color: #714365;
+}
 .form-control::-webkit-input-placeholder {
     color: #FFFFFF;
     opacity: 0.6;
@@ -86,4 +90,20 @@ input[type="text"] {
   border-bottom: 1px solid #714365;
   border-left: none;
   border-right: none;
+}
+input[type="password"] {
+  border-radius: 0;
+  border-top: 1px solid #714365;
+  border-bottom: 1px solid #714365;
+  border-left: none;
+  border-right: none;
+}
+.tessellation-top {
+  margin-top: -1px;
+}
+.tessellation-bottom {
+  margin-bottom: -1px;
+}
+.transparent-top {
+  border-top: 1px solid transparent !important;
 }
