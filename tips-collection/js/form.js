@@ -351,6 +351,7 @@ window.onload = function() {
 					// alert(response.code);
 					if (response.code == "1000") {
 						alert("提交成功！");
+						location.href = './';
 						return;
 					} else if (response.code == "1001") {
 						alert("当前用户验证失败！请重新验证！");
