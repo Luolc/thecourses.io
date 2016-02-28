@@ -23,6 +23,7 @@ function validate(uid, password) {
 				return;
 			}
 			hideLoadingImage();
+			alert(response.msg);
 			setHintText("错误：用户名密码错误或学校服务器异常。");
 		},
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
