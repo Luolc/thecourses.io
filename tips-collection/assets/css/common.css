@@ -68,10 +68,13 @@ body {
 }
 
 /* input */
-.form-control {
+.form-control, .form-control[readonly], .form-control[disabled] {
   color: #FFFFFF;
   background-color: transparent;
   border-radius: 0;
+}
+.form-control[disabled] {
+  cursor: default;
 }
 .form-control:focus {
   border-bottom-color: #714365;
@@ -120,9 +123,18 @@ textarea[type="text"] {
   color: #FFFFFF;
   background-color: transparent;
 }
+.input-group-addon.right-addon {
+  width: 1%;
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .input-group-addon p {
   margin: 0;
   opacity: 0.6;
+}
+.right-addon p:hover, .right-addon p:focus {
+  opacity: 0.4;
+  cursor: pointer;
 }
 .tessellation-top {
   margin-top: -1px;

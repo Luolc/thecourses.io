@@ -12,6 +12,7 @@
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="./assets/css/validate.css">
   <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/loading.css">
 
   <meta name="title" content="IAAA验证">
   <meta name="description" content="使用IAAA系统验证身份"/>
@@ -41,12 +42,25 @@
                 <input type="text" id="input-student-id" name="student-id" class="form-control tessellation-bottom" placeholder="Student ID" autocomplete="off">
                 <input type="password" style="display:none">
                 <label for="password" class="sr-only">Password</label>
-                <input type="text" id="input-password" name="password" class="form-control" placeholder="Password">
-                <button class="btn btn-block ultralight validate-button">验证</button>
+                <input type="text" id="input-password" name="password" class="form-control" placeholder="Password" autocomplete="off">
+                <button id="button-validate" class="btn btn-block ultralight validate-button">验证</button>
               </form>
               <p class="translucent-color note">仍然担心安全问题？<br>
                   可以联系开发者luolc AT pku.edu.cn，并review相关代码^_^<br>
                   欢迎接受大家的监督。</p>
+              <div class="row hint-wrapper">
+                <div class="col-md-3 hint-image-wrapper">
+                  <div class="sk-folding-cube" style="opacity:0.0">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                  </div>
+                </div>
+                <div class="hint-text-wrapper">
+                  <div id="text-hint" class="hint"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -62,6 +76,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Custom script -->
+    <script src="./lib/jquery.cookie.js"></script>
+    <script src="./js/validate.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

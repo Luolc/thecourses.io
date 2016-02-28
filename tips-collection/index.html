@@ -21,8 +21,6 @@
   <!-- <meta property="og:image" content="http://www.luolc.com/images/compass.png"/> -->
   <meta property="og:description" content="课程攻略补完"/>
   <meta property="og:site_name" content="攻略燕园计划">
-
-  
 </head>
 
   <body>
@@ -32,10 +30,10 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="#">HOME</a></li>
-            <li><a href="#about">JOIN US</a></li>
+            <li><a href="#join-us">JOIN US</a></li>
             <li><a href="#contact">CONTACT</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
 
@@ -84,7 +82,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="join-us">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 divider-top divider-bottom statistics-content">
           <h2 class="text-center ultralight">Statistics</h2>
@@ -106,14 +104,14 @@
               </div>
             </div>
             <div class="col-md-6 col-md-offset-3 statistics-detail join-us-button-wrapper">
-              <button class="btn btn-block ultralight" type="button">加入计划</button>
+              <button id="button-join-us" class="btn btn-block ultralight" type="button">加入计划</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="contact">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 contact-content">
           <h2 class="ultralight">联系我们</h3>
@@ -127,8 +125,8 @@
             <div class="col-md-6 col-md-offset-3">
               <form>
                 <label for="contact-account" class="sr-only">Contact Account</label>
-                <input type="text" id="contact-account" name="contact-account" class="form-control" placeholder="Student ID or WeChat Account" autocomplete="off">
-                <button class="btn btn-block ultralight">提交</button>
+                <input type="text" id="input-contact-account" name="contact-account" class="form-control" placeholder="Student ID or WeChat Account" autocomplete="off">
+                <button id="button-submit-contact" class="btn btn-block ultralight">提交</button>
               </form>
             </div>
           </div>
@@ -145,6 +143,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Custom script -->
+    <script src="./lib/jquery.cookie.js"></script>
+    <script src="./js/index.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

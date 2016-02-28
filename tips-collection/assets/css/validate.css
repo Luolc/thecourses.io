@@ -22,3 +22,21 @@
   padding-bottom: 12px;
   font-size: 12px;
 }
+
+/* hint */
+.hint-wrapper {
+  height: 56px;
+}
+.hint-text-wrapper {
+  height: 100%;
+  display: table;
+  padding-left: 0;
+}
+.hint-image-wrapper {
+  padding-right: 0;
+}
+.hint {
+  opacity: 0.6; 
+  vertical-align: middle;
+  display: table-cell;
+}

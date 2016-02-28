@@ -29,9 +29,9 @@
     
     <div class="container">
       <h1 class="text-center ultralight headline">填写攻略</h1>
-      <p class="text-center translucent-color description">欢迎，骆梁宸！<br>
+      <p class="text-center translucent-color description"><greetings></greetings><br>
           开始填写你的独家攻略吧~<br>
-          身份认证有误？<a href="./">重新验证</a></p>
+          身份认证有误？<a id="re-validate" href="./validate.html">重新验证</a></p>
     </div>
 
     <div class="container">
@@ -47,28 +47,85 @@
             <div class="form-group input-group tessellation-bottom form-custom">
               <span class="input-group-addon tessellation-bottom" id="course-name-addon"><p>课程名</p></span>
               <label for="course-name" class="sr-only">course name</label>
-              <input type="text" id="input-course-name" name="course-name" aria-describedby="course-name-addon" class="form-control" placeholder="请输入课程名，或课程名包含的文字，点击搜索。" autocomplete="off">
+              <input type="text" id="input-course-name" name="course-name" class="form-control" placeholder="请输入课程名，或课程名包含的文字，点击搜索。" autocomplete="off">
+              <span class="input-group-addon right-addon tessellation-bottom"><p id="htext-search-course">搜索</p></span>
+            </div>
+
+            <div class="form-group form-custom" id="div-course-list">
+              <div class="choice-list-wrapper">
+                <div id="hint-course-list" class="choice-list-hint">
+                  <span class="translucent-color">请在下方列表中选择你要填写的课程。<htext id="htext-search-again">重新搜索</htext></span>
+                </div>
+
+                <!-- <div class="choice-row course-row">
+                  <div class="choice-text course-name pull-left">数学物理方法</div>
+                  <div class="choice-text course-credit pull-right">4.0</div>
+                </div>
+                <div class="choice-row course-row">
+                  <div class="choice-text course-name pull-left">数学物理方法(上)</div>
+                  <div class="choice-text course-credit pull-right">3.0</div>
+                </div>
+                <div class="choice-row course-row">
+                  <div class="choice-text course-name pull-left">数学物理方法(下)</div>
+                  <div class="choice-text course-credit pull-right">3.0</div>
+                </div> -->
+
+                <div id="input-course-custom-wrapper" class="input-group input-custom-wrapper">
+                  <label for="course-custom" class="sr-only">custom course</label>
+                  <input type="text" id="input-course-custom" name="course-custom" class="form-control" placeholder="未找到课程？在这里手动输入。" autocomplete="off">
+                  <span class="input-group-addon right-addon"><p id="htext-add-course">添加</p></span>
+                </div>
+              </div>
             </div>
             
-            <div class="form-group input-group tessellation-bottom form-custom">
+            <div class="form-group input-group tessellation-bottom form-custom" id="div-teacher">
               <span class="input-group-addon tessellation-bottom" id="teacher-name-addon"><p>讲师</p></span>
               <label for="teacher-name" class="sr-only">teacher name</label>
-              <input type="text" id="input-teacher-name" name="teacher-name" aria-describedby="teacher-name-addon" class="form-control" placeholder="请选择该课程的任课教师。" autocomplete="off">
+              <input type="text" id="input-teacher-name" name="teacher-name" aria-describedby="teacher-name-addon" class="form-control" placeholder="请选择该课程的任课教师。" autocomplete="off" disabled>
+              <span class="input-group-addon right-addon tessellation-bottom"><p id="htext-choice-teacher">重新选择</p></span>
             </div>
 
-            <div class="form-group input-group tessellation-bottom form-custom">
+            <div class="form-group form-custom" id="div-teacher-list">
+              <div class="choice-list-wrapper">
+                <div class="choice-list-hint">
+                  <span class="translucent-color">请在下方列表中选择该课程讲师。</span>
+                </div>
+
+                <!-- <div class="choice-row teacher-row">
+                  <div class="choice-text teacher-name pull-left">邓卫真</div>
+                </div>
+                <div class="choice-row teacher-row">
+                  <div class="choice-text teacher-name pull-left">马伯强</div>
+                </div> -->
+
+                <div id="input-teacher-custom-wrapper" class="input-group input-custom-wrapper">
+                  <label for="course-custom" class="sr-only">custom teacher</label>
+                  <input type="text" id="input-teacher-custom" name="teacher-custom" class="form-control" placeholder="未找到讲师？在这里手动输入。" autocomplete="off">
+                  <span class="input-group-addon right-addon"><p id="htext-add-teacher">添加</p></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group input-group tessellation-bottom form-custom" id="div-tag">
               <span class="input-group-addon tessellation-bottom" id="tag-addon"><p>标签</p></span>
               <label for="tag" class="sr-only">tag</label>
-              <input type="text" id="input-tag" name="tag" aria-describedby="tag-addon" class="form-control" placeholder="为课程添加个性标签，每个标签不超过15字。" autocomplete="off">
+              <input type="text" id="input-tag" name="tag" class="form-control" placeholder="为课程添加个性标签，每个标签不超过15字。" autocomplete="off">
+              <span class="input-group-addon right-addon tessellation-bottom"><p id="htext-add-tag">添加</p></span>
             </div>
 
-            <div class="form-group input-group tessellation-bottom form-custom">
+            <div class="form-group input-group tessellation-bottom form-custom" id="div-tag-exist" >
+              <span class="input-group-addon tessellation-bottom" id="tag-exist-addon"><p>已有标签</p></span>
+              <label for="tag-exist" class="sr-only">tag exist</label>
+              <textarea type="text" id="textarea-tag-exist" name="tag-exist" aria-describedby="tag-exist-addon" class="form-control" autocomplete="off" disabled></textarea>
+            </div>
+
+            <div class="form-group input-group tessellation-bottom form-custom" id="div-tips">
               <span class="input-group-addon tessellation-bottom" id="tips-addon"><p>攻略心得</p></span>
-              <label for="tag" class="sr-only">tips</label>
+              <label for="tips" class="sr-only">tips</label>
               <textarea type="text" id="textarea-tips" name="tips" aria-describedby="tips-addon" class="form-control" placeholder="写写走心的心得体会吧~" autocomplete="off"></textarea>
             </div>
             
-            <button class="btn btn-block ultralight submit-button">提交</button>
+            <button class="btn btn-block ultralight submit-button" id="button-submit" >提交</button>
           </form>
         </div>
       </div>
@@ -83,6 +140,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Custom script -->
+    <script src="./lib/jquery.cookie.js"></script>
+    <script src="./js/form.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
