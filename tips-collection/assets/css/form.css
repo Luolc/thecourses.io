@@ -89,3 +89,10 @@ htext:hover, htext:focus {
   padding-bottom: 12px;
   font-size: 12px;
 }
+
+@media (max-width: 768px) {
+  .choice-list-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

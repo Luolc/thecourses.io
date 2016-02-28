@@ -61,6 +61,11 @@ function setStatistics() {
 window.onload = function() {
 	$(document).ready(function() {
 		setStatistics();
+		if (!isPC()) {
+			str = $("#text-main-description").html();
+			str += "<br><br>「注」为了获得最佳阅读体检，建议您在PC上使用非IE内核浏览器打开本页面。";
+			$("#text-main-description").html(str);
+		}
 		$("#button-join-us").click(function() {
 			if ($.cookie("token") && $.cookie("name")) {
 				location.href = "./form.html";

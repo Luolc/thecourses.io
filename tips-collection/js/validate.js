@@ -23,7 +23,7 @@ function validate(uid, password) {
 				return;
 			}
 			hideLoadingImage();
-			alert(response.msg);
+			// alert(response.msg);
 			setHintText("错误：用户名密码错误或学校服务器异常。");
 		},
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -49,7 +49,10 @@ function hideLoadingImage() {
 window.onload = function() {
 	$(document).ready(function() {
 		$("#input-password").focus(function() {
-			$("#input-password").attr("type", "password");
+			if ($("#input-password").attr("type") == "text") {
+				$("#input-password").attr("type", "password");
+				$("#input-password").focus();
+			}
 			return false;
 		});
 		$("#button-validate").click(function() {

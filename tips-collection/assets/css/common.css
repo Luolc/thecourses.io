@@ -30,6 +30,9 @@ body {
 .ultralight {
   font-weight: 100;
 }
+.ultralight-safari {
+  font-weight: 300;
+}
 .translucent-color {
   opacity: 0.6;
 }
@@ -157,4 +160,25 @@ textarea[type="text"] {
 }
 ::-webkit-scrollbar-thumb:active {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .container {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 536px) {
+  .container {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
 }

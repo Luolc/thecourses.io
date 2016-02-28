@@ -83,9 +83,13 @@ function search(key) {
 				// alert(JSON.stringify(response));
 				ele = $("#input-course-custom-wrapper");
 				for (i = 0; i < response.data.length; ++i) {
+					name = response.data[i]['name'];
+					if (!isPC() && name.length > 12) {
+						name = name.substring(0, 12) + '...';
+					}
 					ele.before(
 						'<div class="choice-row course-row"><div class="choice-text course-name pull-left">' 
-						+ response.data[i]['name'] 
+						+ name
 						+ '</div><div class="choice-text course-credit pull-right">' 
 						+ parseFloat(response.data[i]['credit']).toFixed(1) + '</div></div>');
 				}
@@ -211,6 +215,11 @@ $.fn.autoHeight = function() {
 
 window.onload = function() {
 	$(document).ready(function() {
+		if (!isPC()) {
+			$("#input-cname").attr("placeholder", "报告中会标明该昵称。");
+			$("#input-course-name").attr("placeholder", "全称或包含的文字。");
+			$("#input-tag").attr("placeholder", "不超过15字。");
+		}
 		init();
 		// 重新验证
 		$("#re-validate").click(function() {

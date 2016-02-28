@@ -40,7 +40,7 @@
     <div class="container main-headline">
       <img src="./assets/images/logo.png" class="logo center-block" alt="logo">
       <h1 class="text-center ultralight">攻略燕园计划</h1>
-      <p class="text-center translucent-color">这不是来自隔壁的机密任务，而是关于如何优雅地在燕园生存，打怪练级<br>
+      <p id="text-main-description" class="text-center translucent-color">这不是来自隔壁的机密任务，而是关于如何优雅地在燕园生存，打怪练级<br>
           这是一名脑洞少年的奇异点子：集众人之力，打造一款『燕园生存攻略』<br>
           从燕南不可错过的美食，到国合面试技巧集锦，一份随处可用的完备指南<br><br>
 
@@ -49,7 +49,7 @@
 
     <div class="container elective">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 divider-top divider-bottom elective-content">
+        <div class="col-sm-8 col-sm-offset-2 divider-top divider-bottom elective-content">
           <img src="./assets/images/roundImage.png" class="round-image center-block" alt="round image">
           <h3 class="text-center ultralight">Elective</h3>
           <p class="text-center translucent-color">受制于落后的架构和糟糕的用户体验<br>
@@ -65,8 +65,8 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 detail-content">
-          <h2 class="pull-left ultralight">分享体会</h2>
+        <div class="col-sm-8 col-sm-offset-2 detail-content">
+          <h2 class="pull-left ultralight">分享体会</h2>         
           <p class="pull-left translucent-color detail-description">总会有一门课让你印象深刻<br>
               风趣幽默的讲师、令人抓狂的习题论文、或是救你一命的往年考题<br>
               一些只有亲身体验过才有的心得体会<br>
@@ -84,26 +84,26 @@
 
     <div class="container" id="join-us">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 divider-top divider-bottom statistics-content">
+        <div class="col-sm-8 col-sm-offset-2 divider-top divider-bottom statistics-content">
           <h2 class="text-center ultralight">Statistics</h2>
           <div class="row">
-            <div class="col-md-6 col-md-offset-3 divider-top divider-bottom statistics-detail">
+            <div class="col-sm-6 col-sm-offset-3 divider-top divider-bottom statistics-detail">
               <div class="row">
-                <div class="col-md-4 text-center ultralight">
+                <div class="col-xs-4 text-center ultralight">
                   <h2 id="text-joined-count" class="ultralight">-</h2>
                   <p class="unit-text text-center">JOINED</p>
                 </div>
-                <div class="col-md-4 text-center ultralight">
+                <div class="col-xs-4 text-center ultralight">
                   <h2 id="text-tips-count" class="ultralight">-</h2>
                   <p class="unit-text text-center">TIPS</p>
                 </div>
-                <div class="col-md-4 text-center ultralight">
+                <div class="col-xs-4 text-center ultralight">
                   <h2 id="text-views-count" class="ultralight">-</h2>
                   <p class="unit-text text-center">VIEWS</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-md-offset-3 statistics-detail join-us-button-wrapper">
+            <div class="col-sm-6 col-sm-offset-3 statistics-detail join-us-button-wrapper">
               <button id="button-join-us" class="btn btn-block ultralight" type="button">加入计划</button>
             </div>
           </div>
@@ -113,7 +113,7 @@
 
     <div class="container" id="contact">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 contact-content">
+        <div class="col-sm-8 col-sm-offset-2 contact-content">
           <h2 class="ultralight">联系我们</h3>
           <p class="translucent-color">如果你不仅仅想分享一篇课程攻略。<br>
               而感兴趣攻略整理、发布平台开发、计划宣传推广。<br>
@@ -122,7 +122,7 @@
               将你的学号或微信号发至luolc AT pku.edu.cn，或在下方表单内填写提交。<br>
               我将通过PKU Helper消息平台或微信找到你^_^</p>
           <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-sm-6 col-sm-offset-3">
               <form>
                 <label for="contact-account" class="sr-only">Contact Account</label>
                 <input type="text" id="input-contact-account" name="contact-account" class="form-control" placeholder="Student ID or WeChat Account" autocomplete="off">
@@ -145,6 +145,7 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Custom script -->
     <script src="./lib/jquery.cookie.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>

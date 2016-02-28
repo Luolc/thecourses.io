@@ -57,7 +57,7 @@
 }
 
 /* statistics*/
-.statistics-detail.col-md-6 {
+.statistics-detail.col-sm-6 {
   padding-left: 0;
   padding-right: 0;
 }
@@ -88,4 +88,18 @@
   padding-top: 12px;
   padding-bottom: 12px;
   font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .main-headline {
+    padding-top: 20px;
+  }
+  .main-headline h1 {
+    font-size: 40px;
+  }
+
+  .statistics-detail {
+    margin-left: 44px;
+    margin-right: 44px;
+  }
 }
