@@ -348,9 +348,17 @@ window.onload = function() {
 				dataType: "jsonp",
 				jsonpCallback: "uploadTipCallback",
 				success: function(response) {
-					alert(response.code);
+					// alert(response.code);
 					if (response.code == "1000") {
-						
+						alert("提交成功！");
+						return;
+					} else if (response.code == "1001") {
+						alert("当前用户验证失败！请重新验证！");
+						$.removeCookie("token");
+						$.removeCookie("name");
+						location.href = "./validate.html";
+					} else if (response.code == "1002") {
+						alert("课程识别错误，请尝试填写自定义课程名或讲师。");
 						return;
 					}
 				},
@@ -360,7 +368,7 @@ window.onload = function() {
 			       alert(textStatus);
 		     	}
 			});
-			alert("提交成功！");
+			
 			return false;
 		});
 
